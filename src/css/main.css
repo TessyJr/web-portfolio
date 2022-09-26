@@ -1,6 +1,11 @@
 @import url("http://fonts.cdnfonts.com/css/eurostile");
+
 @import url("http://fonts.cdnfonts.com/css/poppins");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}

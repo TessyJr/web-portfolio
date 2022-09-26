@@ -18,3 +18,27 @@ menuIcon.addEventListener("click", () => {
     menuStatus = 1;
   }
 });
+
+// Back to top button
+let mybutton = document.getElementById("btn-back-to-top");
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.classList.add("opacity-100");
+    mybutton.classList.remove("pointer-events-none");
+  } else {
+    mybutton.classList.remove("opacity-100");
+    mybutton.classList.add("pointer-events-none");
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
